@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeIcon</title>
+    <title>Image Tooltip and Labels</title>
+    <style>
+        body {
+            padding: 50px 20px 20px 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            position: relative; /* 라벨과 툴팁을 위한 상대 위치 설정 */
+        }
+        img {
+            width: 100px;
+            height: auto;
+        }
+        .image-label {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 1; /* 라벨이 이미지 위에 표시되도록 설정 */
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 10;
+            white-space: nowrap;
+            text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+        }
+    </style>
 </head>
 <body>
-    <img src="icon/per_h4_01.jpg" alt="#img01">
-    <img src="icon/per_h4_02.jpg" alt="#img01">
-    <img src="icon/per_h4_03.jpg" alt="#img01">
-    <img src="icon/per_h4_04.jpg" alt="#img01">
-    <img src="icon/per_h4_05.jpg" alt="#img01">
-    <img src="icon/per_h4_06.jpg" alt="#img01">
-    <img src="icon/per_h4_07.jpg" alt="#img01">
-    <img src="icon/per_h4_08.jpg" alt="#img01">
-    <img src="icon/per_h4_09.jpg" alt="#img01">
-    <img src="icon/per_h4_10.jpg" alt="#img01">
-    <img src="icon/per_h4_10_2.png" alt="#img01">
-    <img src="icon/per_h4_11.jpg" alt="#img01">
-    <img src="icon/per_h4_12.jpg" alt="#img01">
-    <img src="icon/per_h4_13.jpg" alt="#img01">
-    <img src="icon/per_h4_14.jpg" alt="#img01">
-    <img src="icon/per_h4_15.jpg" alt="#img01">
-    <img src="icon/per_h4_16.jpg" alt="#img01">
-    <img src="icon/per_h4_17.png" alt="#img01">
-    <img src="icon/per_h4_18.jpg" alt="#img01">
-    <img src="icon/per_h4_19.jpg" alt="#img01">
+
+    <div class="image-container">
+        <img src="icon/per_h4_01.jpg" alt="#img01">
+        <div class="image-label">1</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_02.jpg" alt="#img02">
+        <div class="image-label">2</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_03.jpg" alt="#img03">
+        <div class="image-label">3</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_04.jpg" alt="#img04">
+        <div class="image-label">4</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_05.jpg" alt="#img05">
+        <div class="image-label">5</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_06.jpg" alt="#img06">
+        <div class="image-label">6</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_07.jpg" alt="#img07">
+        <div class="image-label">7</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_08.jpg" alt="#img08">
+        <div class="image-label">8</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_09.jpg" alt="#img09">
+        <div class="image-label">9</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_10.jpg" alt="#img10">
+        <div class="image-label">10</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_10_2.png" alt="#img11">
+        <div class="image-label">11</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_11.jpg" alt="#img12">
+        <div class="image-label">12</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_12.jpg" alt="#img13">
+        <div class="image-label">13</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_13.jpg" alt="#img14">
+        <div class="image-label">14</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_14.jpg" alt="#img15">
+        <div class="image-label">15</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_15.jpg" alt="#img16">
+        <div class="image-label">16</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_16.jpg" alt="#img17">
+        <div class="image-label">17</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_17.png" alt="#img18">
+        <div class="image-label">18</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_18.jpg" alt="#img19">
+        <div class="image-label">19</div>
+    </div>
+    <div class="image-container">
+        <img src="icon/per_h4_19.jpg" alt="#img20">
+        <div class="image-label">20</div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('img');
+
+        images.forEach((img) => {
+            // 툴팁 생성
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            img.parentNode.insertBefore(tooltip, img); // 이미지 앞에 툴팁 추가
+
+            // 마우스 오버 이벤트
+            img.addEventListener('mouseenter', () => {
+                tooltip.textContent = img.src; // src 경로 표시
+                tooltip.style.display = 'block'; // 툴팁 표시
+                tooltip.style.left = `${img.offsetLeft}px`;
+                tooltip.style.top = `${img.offsetTop - 40}px`; // 이미지 위에 위치 조정
+            });
+
+            img.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none'; // 툴팁 숨기기
+            });
+        });
+    </script>
+
 </body>
 </html>
